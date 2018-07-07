@@ -1,0 +1,14 @@
+" =============================================================================
+" キーマップ
+" =============================================================================
+" leaderをspace
+let mapleader = "\<Space>"
+
+" vim-plug
+nnoremap <silent><Leader>pi  :PlugInstall<CR>
+nnoremap <silent><Leader>pu  :PlugUpdate<CR>
+nnoremap <silent><Leader>ps  :PlugStatus<CR>
+
+" nerdtree
+nnoremap <silent><Leader>e :NERDTreeToggle<CR>
+

@@ -59,17 +59,12 @@ set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set scrolloff=3
 
 " =============================================================================
-" キーマップ
-" =============================================================================
-" vim-plug
-nnoremap <silent><Space>pi  :PlugInstall<CR>
-nnoremap <silent><Space>pu  :PlugUpdate<CR>
-nnoremap <silent><Space>ps  :PlugStatus<CR>
-" nerdtree
-nnoremap <silent><Space>e :NERDTreeToggle<CR>
-
-" =============================================================================
 " vim-airline
 " =============================================================================
 let g:airline#extensions#tabline#enabled = 1
+
+" =============================================================================
+" 他のファイルを読み込み
+" =============================================================================
+source ~/.vimrc.keybind
 
