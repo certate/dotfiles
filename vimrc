@@ -57,6 +57,8 @@ set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 " スクロールの余裕を確保する
 set scrolloff=3
+" バッファを右に開く
+set splitright
 
 " =============================================================================
 " vim-airline
