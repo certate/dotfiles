@@ -5,7 +5,7 @@ filetype plugin indent on
 " =============================================================================
 call plug#begin('~/.vim/plugged')
   " カラースキーム
-  Plug 'cocopon/iceberg.vim'
+  Plug 'nanotech/jellybeans.vim'
   " ツリー表示
   Plug 'scrooloose/nerdtree'
   " git連携
@@ -31,19 +31,14 @@ set expandtab
 " =============================================================================
 " 見た目
 " =============================================================================
-" カラースキーム
-colorscheme iceberg
-" 背景を透過
-augroup TransparentBG
-  autocmd!
-  autocmd Colorscheme * highlight Normal ctermbg=none
-  autocmd Colorscheme * highlight NonText ctermbg=none
-  autocmd Colorscheme * highlight LineNr ctermbg=none
-  autocmd Colorscheme * highlight Folded ctermbg=none
-  autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
-augroup END
 " シンタックスハイライトを有効
 syntax enable
+" 背景を透過
+let g:jellybeans_overrides = {
+      \'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+      \}
+" カラースキーム
+colorscheme jellybeans
 " 行番号
 set number
 " コマンドラインに使われる画面上の行数
@@ -72,6 +67,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:vim_tags_auto_generate = 0
 " タグファイル名
 let g:vim_tags_main_file = '.tags'
+
+let g:vim_tags_project_tags_command = "{CTAGS} -R {OPTIONS} {DIRECTORY} 2>/dev/null"
+
+let g:vim_tags_gems_tags_command = "{CTAGS} -R {OPTIONS} `bundle show --paths` 2>/dev/null"
 
 " =============================================================================
 " 他のファイルを読み込み
