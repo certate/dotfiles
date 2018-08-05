@@ -36,6 +36,7 @@ syntax enable
 " 背景を透過
 let g:jellybeans_overrides = {
       \'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+      \'StringDelimiter': { 'ctermfg': 'DarkYellow', '256ctermfg': 'DarkYellow' },
       \}
 " カラースキーム
 colorscheme jellybeans
