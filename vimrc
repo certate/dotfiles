@@ -12,8 +12,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
   " 見た目よくする
   Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   " タグジャンプ
   Plug 'szw/vim-tags'
+  " git diff
+  Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " =============================================================================
@@ -36,6 +39,7 @@ syntax enable
 " 背景を透過
 let g:jellybeans_overrides = {
       \'background': { 'ctermbg': 'none', '256ctermbg': 'none' },
+      \'StringDelimiter': { 'ctermfg': 'DarkYellow', '256ctermfg': 'DarkYellow' },
       \}
 " カラースキーム
 colorscheme jellybeans
