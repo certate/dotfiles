@@ -22,3 +22,6 @@ nnoremap <silent><Leader>tv :vsplit<CR> :exe("tjump ".expand('<cword>'))<CR>
 " terminal
 nnoremap <silent><Leader>ter :vsplit<CR> :terminal ++curwin<CR>
 
+" vim-gitgutter
+nnoremap <silent><Leader>df  :GitGutterToggle<CR>
+
